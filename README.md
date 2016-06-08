@@ -22,7 +22,7 @@ SOFTWARE.
 
 #WSDL-JS
 
-WSDL-JS is entirely written javascript WSDL-JS downloads and parses a remote wsdl in javascript. To overcome CORS related issues with remote api, WSDL-JS depends on socket-fetch library which uses http socket connections instead of Ajax XMLHttpRequest. To Parse xml to json, it uses X2JS library. 
+WSDL-JS is entirely written in javascript. WSDL-JS downloads and parses a remote wsdl in javascript. To overcome CORS related issues with remote api, It uses socket-fetch library which makes httpconnections using web sockets instead of Ajax XMLHttpRequest. It also uses X2JS library to Parse from xml to json and vice versa. 
 
 Example
 
@@ -34,12 +34,13 @@ Add the following in the head section
 Use below code to download and parse wsdl. 
 ```
  var w = new wsdl(apiService);
-            w.load().then(function () {
-                w.createRequests();
-                //to get operations
-                var operations = w.operations;
+  w.load().then(function () {
+    //Once loaded call createRequests, to parse each operation and associated types.
+     w.createRequests();
+    //to get operations
+    var operations = w.operations;
                 
-               }
+  }
 ```
 
 
