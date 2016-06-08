@@ -34,6 +34,7 @@ Add the following in the head section
 ```
 Use below code to download and parse wsdl. 
 ```
+var apiService = 'https://www.example.com/someservice.svc?wsdl';
  var w = new wsdl(apiService);
   w.load().then(function () {
     //Once loaded call createRequests, to parse each operation and associated types.
