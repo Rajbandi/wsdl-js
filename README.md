@@ -30,6 +30,7 @@ Add the following in the head section
 ```
 <link rel="import" href="/socket-fetch/socket-fetch.html">
 <script src="/abdmob/x2js/xml2json.min.js"></script>
+<script src="wsdl.js"></script>
 ```
 Use below code to download and parse wsdl. 
 ```
