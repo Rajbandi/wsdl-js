@@ -1,3 +1,7 @@
+/* Copyright (C) Raj Bandi
+ * Written by Raj Bandi <raj.bandi@hotmail.com>, June 2016
+ */
+
 function constants() {
 
 }
