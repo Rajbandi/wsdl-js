@@ -2,6 +2,45 @@
  * Written by Raj Bandi <raj.bandi@hotmail.com>, June 2016
  */
 
+if (!String.format) {
+    String.format = function (format) {
+        var args = Array.prototype.slice.call(arguments, 1);
+        return format.replace(/{(\d+)}/g, function (match, number) {
+            return typeof args[number] != 'undefined'
+                ? args[number]
+                : match
+                ;
+        });
+    };
+}
+
+if (!Object.isNullOrEmpty) {
+    Object.isNullOrEmpty = function (obj) {
+
+        return obj == null || obj == 'undefined' || obj == '';
+    };
+}
+
+function util() {
+
+}
+
+util.isArray = function (obj) {
+    return Object.prototype.toString.call(obj) === '[object Array]';
+}
+
+util.xml2json = function (xml) {
+    var x2js = new X2JS();
+    var json = x2js.xml2json(xml);
+    return json;
+}
+
+util.json2xml = function (json) {
+    var x2js = new X2JS();
+    var xml = x2js.json2xml(json);
+    return xml;
+}
+ 
 function constants() {
 
 }
